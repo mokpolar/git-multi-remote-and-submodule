@@ -174,3 +174,54 @@ git pull --recurse-submodules
 ```
 
 Done.
+
+---
+
+## Extra: push to `all`:
+
+Commit changes:
+
+```console
+# Start commit
+$ git add .
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+$ git commit -m 'doubling remotes'
+[main 9a0976f] doubling remotes
+ 5 files changed, 185 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 .gitmodules
+ rewrite README.md (100%)
+ create mode 160000 ldap
+ create mode 160000 springboot
+```
+
+Then push it:
+
+```
+$ git push all
+Username for 'https://github.com': pydemia
+Password for 'https://pydemia@github.com':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.62 KiB | 1.62 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/pydemia/git-multi-remote-and-submodule
+   72d7d74..9a0976f  main -> main
+Username for 'https://gitlab.com': pydemia
+Password for 'https://pydemia@gitlab.com':
+warning: redirecting to https://gitlab.com/pydemia/git-multi-remote-and-submodule.git/
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 2.21 KiB | 753.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+To https://gitlab.com/pydemia/git-multi-remote-and-submodule
+ * [new branch]      main -> main
+```
+
+Done.
