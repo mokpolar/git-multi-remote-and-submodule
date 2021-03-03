@@ -1,0 +1,7 @@
+[submodule "springboot"]
+	path = springboot
+	url = https://github.com/pydemia/springboot-demo
+[submodule "ldap"]
+	path = ldap
+	url = https://github.com/pydemia/ldap
+	branch = main
